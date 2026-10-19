@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr" data-theme="systeme" data-animations="systeme">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Carnet Fil Rouge</title>
+<meta name="description" content="Un carnet d'écriture privé : une consigne écrite à la main par jour, rien ne quitte l'appareil.">
+<meta name="theme-color" content="#E8E5DE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1C1B19" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icone.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icone-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Carnet">
+<link rel="preload" href="fonts/iAWriterQuattroS-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/atkinson-hyperlegible-next-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/carnet.css">
+<script src="js/demarrage.js"></script>
+<script type="module" src="js/app.js"></script>
+</head>
+<body>
+<a class="evitement" href="#contenu" id="evitement">Aller au contenu</a>
+<div class="cadre">
+  <header class="tete" id="tete">
+    <svg width="28" height="20" viewBox="0 0 28 20" aria-hidden="true" focusable="false"><path class="trait-fil" d="M1 15 C7 15 8 4 14 4 S21 15 27 15"/></svg>
+    <span class="marque" id="marque">Carnet Fil Rouge</span>
+  </header>
+  <main id="contenu" tabindex="-1">
+    <noscript><p>Ce carnet a besoin de JavaScript pour fonctionner. Aucune donnée ne quitte l'appareil.</p></noscript>
+  </main>
+</div>
+<nav class="barre" id="barre" aria-label="Navigation principale"></nav>
+<div id="seance-hote"></div>
+<div class="sr" aria-live="polite" id="annonce"></div>
+</body>
+</html>

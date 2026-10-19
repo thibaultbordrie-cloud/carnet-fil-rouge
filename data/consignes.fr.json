@@ -1,0 +1,470 @@
+[
+ {
+  "id": "fr-01",
+  "famille": "observer",
+  "texte": "Noter trois sons que l'on entend en ce moment, du plus proche au plus lointain.",
+  "plus_petit": "Un seul son suffit.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-02",
+  "famille": "observer",
+  "texte": "Décrire la lumière de la pièce sans employer le mot « lumière ».",
+  "plus_petit": "Dire seulement d'où elle vient.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-03",
+  "famille": "observer",
+  "texte": "Prendre un objet à portée de main. Écrire son poids, sa température, le bruit qu'il fait quand on le repose.",
+  "plus_petit": "Écrire seulement sa couleur exacte.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-04",
+  "famille": "observer",
+  "texte": "Regarder par la fenêtre la plus proche et écrire la première chose qui bouge.",
+  "plus_petit": "Ou la première chose qui ne bouge pas.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-05",
+  "famille": "observer",
+  "texte": "Décrire une tasse, un verre ou une bouteille comme si personne n'en avait jamais vu.",
+  "plus_petit": "Commencer par sa forme.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-06",
+  "famille": "observer",
+  "texte": "Faire l'inventaire d'une poche, d'un sac ou d'un tiroir, dans l'ordre où les choses sortent.",
+  "plus_petit": "Trois objets, pas plus.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-07",
+  "famille": "observer",
+  "texte": "Écrire le trajet de la porte d'entrée jusqu'au lit. Compter les pas, si l'on veut.",
+  "plus_petit": "Seulement la porte et le lit.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-08",
+  "famille": "observer",
+  "texte": "Décrire une odeur croisée aujourd'hui : où, quand, à quoi elle ressemblait.",
+  "plus_petit": "Nommer l'endroit, c'est déjà bien.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-09",
+  "famille": "observer",
+  "texte": "Noter la météo du jour comme un relevé : ciel, vent, température, état du sol.",
+  "plus_petit": "Une seule mesure.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-10",
+  "famille": "observer",
+  "texte": "Décrire ses chaussures à quelqu'un qui devra les retrouver dans une gare bondée.",
+  "plus_petit": "Trois indices.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-11",
+  "famille": "observer",
+  "texte": "Observer une plante, un arbre ou une tache sur un mur pendant une minute, puis l'écrire.",
+  "plus_petit": "Écrire sa forme en une ligne.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-12",
+  "famille": "observer",
+  "texte": "Décrire un bruit qui se répète (réfrigérateur, horloge, pluie, circulation) et son rythme.",
+  "plus_petit": "Imiter le son avec des lettres.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-13",
+  "famille": "observer",
+  "texte": "Où le corps touche-t-il quelque chose en ce moment (chaise, sol, vêtement, téléphone) ? Écrire chaque point de contact, un par ligne.",
+  "plus_petit": "Un seul point de contact.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-14",
+  "famille": "observer",
+  "texte": "Écrire ce que l'on a mangé en dernier, avec la précision d'un chimiste ou d'un chef.",
+  "plus_petit": "Un seul ingrédient.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-15",
+  "famille": "observer",
+  "texte": "Décrire ses mains en ce moment : leur position, ce qu'elles touchent, ce qu'elles ont fait aujourd'hui.",
+  "plus_petit": "Ce qu'elles touchent, seulement.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-16",
+  "famille": "observer",
+  "texte": "Décrire une règle sociale ordinaire (dire bonjour, faire la queue, offrir un cadeau) comme le ferait une anthropologue venue d'ailleurs.",
+  "plus_petit": "Décrire seulement les gestes.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-17",
+  "famille": "inventer",
+  "texte": "Quelqu'un attend un bus qui ne vient pas. Écrire ce qu'il fait de ses mains.",
+  "plus_petit": "Écrire l'heure affichée.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-18",
+  "famille": "inventer",
+  "texte": "Une lettre arrive avec vingt ans de retard. Écrire l'adresse sur l'enveloppe, puis la première ligne.",
+  "plus_petit": "L'adresse suffit.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-19",
+  "famille": "inventer",
+  "texte": "Un phare s'allume pour la dernière fois. La gardienne range une seule chose. Laquelle ?",
+  "plus_petit": "Nommer l'objet.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-20",
+  "famille": "inventer",
+  "texte": "Deux personnes partagent un parapluie trop petit. Personne ne parle. Décrire la pluie.",
+  "plus_petit": "Le bruit de la pluie sur la toile.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-21",
+  "famille": "inventer",
+  "texte": "Une boulangerie à cinq heures du matin, avant l'ouverture.",
+  "plus_petit": "Une seule odeur, un seul bruit.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-22",
+  "famille": "inventer",
+  "texte": "Un robot ménager découvre un objet qu'il ne sait pas classer. Écrire sa fiche de rangement.",
+  "plus_petit": "Le nom qu'il lui donne.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-23",
+  "famille": "inventer",
+  "texte": "Une personne se réveille dans une maison inconnue. Écrire la première minute, seulement ce qu'elle voit.",
+  "plus_petit": "Le plafond.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-24",
+  "famille": "inventer",
+  "texte": "Un personnage vient d'apprendre une nouvelle importante. Ne rien dire de ce qu'il ressent : écrire seulement ce que font ses mains, ses pieds, ses yeux pendant une minute.",
+  "plus_petit": "Un seul geste.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-25",
+  "famille": "inventer",
+  "texte": "Un bibliothécaire remarque qu'un livre revient toujours avec la même page cornée. Quelle page ?",
+  "plus_petit": "Le numéro de la page.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-26",
+  "famille": "inventer",
+  "texte": "Un train de nuit s'arrête en rase campagne. Le contrôleur annonce : « … ». Compléter l'annonce.",
+  "plus_petit": "Une phrase d'annonce.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-27",
+  "famille": "inventer",
+  "texte": "Quelqu'un repeint une porte. Décrire la couleur d'avant et celle d'après.",
+  "plus_petit": "Les deux noms de couleur.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-28",
+  "famille": "inventer",
+  "texte": "Une grand-mère et son petit-fils épluchent des légumes sans parler. Décrire seulement leurs gestes et les bruits de la cuisine.",
+  "plus_petit": "Le bruit du couteau.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-29",
+  "famille": "inventer",
+  "texte": "Un personnage prépare une valise pour un voyage qu'il ne fera peut-être pas. Lister ce qu'il y met.",
+  "plus_petit": "Trois choses.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-30",
+  "famille": "inventer",
+  "texte": "Une famille arrive dans un pays dont elle ne lit pas encore l'alphabet. Écrire les trois premiers mots qu'un enfant apprend à reconnaître sur les panneaux.",
+  "plus_petit": "Un seul panneau.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-31",
+  "famille": "se-souvenir",
+  "texte": "Décrire la cuisine d'un logement où l'on a vécu. Où était l'évier ? Où était la fenêtre ?",
+  "plus_petit": "Seulement l'évier.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-32",
+  "famille": "se-souvenir",
+  "texte": "La première adresse que l'on a sue par cœur. Qu'y avait-il en face ?",
+  "plus_petit": "L'adresse elle-même.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-33",
+  "famille": "se-souvenir",
+  "texte": "Un objet que l'on avait enfant et que l'on n'a plus : sa taille, sa couleur, sa place.",
+  "plus_petit": "Son nom.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-34",
+  "famille": "se-souvenir",
+  "texte": "Un trajet fait des centaines de fois. Trois repères le long du chemin.",
+  "plus_petit": "Un repère.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-35",
+  "famille": "se-souvenir",
+  "texte": "Un plat que quelqu'un préparait souvent. En écrire la recette, même approximative.",
+  "plus_petit": "Les ingrédients, sans quantités.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-36",
+  "famille": "se-souvenir",
+  "texte": "Un son précis d'une année précise (une sonnerie, un générique, un moteur). Où l'entendait-on ?",
+  "plus_petit": "L'année et le son.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-37",
+  "famille": "se-souvenir",
+  "texte": "Le plus vieil objet de la pièce. D'où vient-il ? Depuis quand est-il là ?",
+  "plus_petit": "Son âge, même deviné.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-38",
+  "famille": "se-souvenir",
+  "texte": "Les chaussures rangées dans l'entrée d'une maison de famille : combien de paires, à qui, dans quel ordre.",
+  "plus_petit": "Une seule paire.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-39",
+  "famille": "jouer",
+  "texte": "Écrire une phrase d'exactement dix mots.",
+  "plus_petit": "Ou de cinq mots.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-40",
+  "famille": "jouer",
+  "texte": "Écrire trois phrases qui commencent toutes par « Il y a ».",
+  "plus_petit": "Une seule.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-41",
+  "famille": "jouer",
+  "texte": "Écrire une phrase sans la lettre « e ».",
+  "plus_petit": "Ou sans la lettre « a ».",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-42",
+  "famille": "jouer",
+  "texte": "Lister des choses bleues qui ne sont ni le ciel ni la mer.",
+  "plus_petit": "Une seule chose bleue.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-43",
+  "famille": "jouer",
+  "texte": "Écrire le mode d'emploi d'un objet très simple : une cuillère, une porte, un bouton.",
+  "plus_petit": "La première étape.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-44",
+  "famille": "jouer",
+  "texte": "Rédiger une petite annonce : objet perdu, objet trouvé ou objet à donner.",
+  "plus_petit": "Le titre de l'annonce.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-45",
+  "famille": "jouer",
+  "texte": "Commencer par « Je me souviens » et continuer avec un fait minuscule. Recommencer, si l'envie vient.",
+  "plus_petit": "Une seule fois.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-46",
+  "famille": "jouer",
+  "texte": "Écrire une phrase qui contient un nombre, une couleur et un nom de lieu.",
+  "plus_petit": "Deux des trois.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-47",
+  "famille": "jouer",
+  "texte": "Raconter la journée d'hier en cinq mots.",
+  "plus_petit": "En un mot.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-48",
+  "famille": "jouer",
+  "texte": "Inventer le titre d'un livre qui n'existe pas, puis sa quatrième de couverture en deux phrases.",
+  "plus_petit": "Le titre seul.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-49",
+  "famille": "continuer",
+  "texte": "Continuer ce début, avec un tout autre personnage : « Longtemps, je me suis couché de bonne heure. » (Marcel Proust, Du côté de chez Swann, 1913)",
+  "plus_petit": "Écrire seulement la phrase suivante.",
+  "emotion": "aucune",
+  "source": {
+   "reference": "Marcel Proust, Du côté de chez Swann, 1913",
+   "gutenberg": "https://www.gutenberg.org/ebooks/2650",
+   "domaine_public": true,
+   "verifie": true
+  }
+ },
+ {
+  "id": "fr-50",
+  "famille": "continuer",
+  "texte": "Continuer ce début, dans une autre ville : « La petite ville de Verrières peut passer pour l'une des plus jolies de la Franche-Comté. » (Stendhal, Le Rouge et le Noir, 1830)",
+  "plus_petit": "Nommer la ville et dire ce qu'on y voit.",
+  "emotion": "aucune",
+  "source": {
+   "reference": "Stendhal, Le Rouge et le Noir, 1830",
+   "gutenberg": "https://www.gutenberg.org/ebooks/798",
+   "domaine_public": true,
+   "verifie": true
+  }
+ },
+ {
+  "id": "fr-51",
+  "famille": "continuer",
+  "texte": "Continuer ce début : « Jeanne, ayant fini ses malles, s'approcha de la fenêtre, mais la pluie ne cessait pas. » (Guy de Maupassant, Une vie, 1883)",
+  "plus_petit": "Ce que Jeanne voit par la fenêtre.",
+  "emotion": "aucune",
+  "source": {
+   "reference": "Guy de Maupassant, Une vie, 1883",
+   "gutenberg": "https://www.gutenberg.org/ebooks/17457",
+   "domaine_public": true,
+   "verifie": true
+  }
+ },
+ {
+  "id": "fr-52",
+  "famille": "continuer",
+  "texte": "Répondre à cette question, à sa façon : « Comment s'étaient-ils rencontrés ? Par hasard, comme tout le monde. » (Denis Diderot, Jacques le fataliste et son maître, publié en 1796)",
+  "plus_petit": "Dire où, seulement.",
+  "emotion": "aucune",
+  "source": {
+   "reference": "Denis Diderot, Jacques le fataliste et son maître, publié en 1796",
+   "gutenberg": "https://www.gutenberg.org/ebooks/39976",
+   "domaine_public": true,
+   "verifie": true
+  }
+ },
+ {
+  "id": "fr-53",
+  "famille": "continuer",
+  "texte": "Continuer ce début : « Nous étions à l'Étude, quand le Proviseur entra… » (Gustave Flaubert, Madame Bovary, 1857)",
+  "plus_petit": "Qui entre derrière lui ?",
+  "emotion": "aucune",
+  "source": {
+   "reference": "Gustave Flaubert, Madame Bovary, 1857",
+   "gutenberg": "https://www.gutenberg.org/ebooks/14155",
+   "domaine_public": true,
+   "verifie": true
+  }
+ },
+ {
+  "id": "fr-54",
+  "famille": "continuer",
+  "texte": "Continuer ce début, dans un autre paysage : « Dans la plaine rase, sous la nuit sans étoiles… » (Émile Zola, Germinal, 1885)",
+  "plus_petit": "Ce que l'on entend dans cette nuit.",
+  "emotion": "aucune",
+  "source": {
+   "reference": "Émile Zola, Germinal, 1885",
+   "gutenberg": "https://www.gutenberg.org/ebooks/5711",
+   "domaine_public": true,
+   "verifie": true
+  }
+ },
+ {
+  "id": "fr-55",
+  "famille": "continuer",
+  "texte": "Écrire une phrase sur le même patron, pour un personnage à soi : « En 1815, M. Charles-François-Bienvenu Myriel était évêque de Digne. » (Victor Hugo, Les Misérables, 1862)",
+  "plus_petit": "Une année, un nom, un métier, un lieu.",
+  "emotion": "aucune",
+  "source": {
+   "reference": "Victor Hugo, Les Misérables, 1862",
+   "gutenberg": "https://www.gutenberg.org/ebooks/17489",
+   "domaine_public": true,
+   "verifie": true
+  }
+ },
+ {
+  "id": "fr-56",
+  "famille": "continuer",
+  "texte": "Continuer ce début : « Le premier lundi du mois d'avril 1625… » (Alexandre Dumas, Les Trois Mousquetaires, 1844)",
+  "plus_petit": "Le temps qu'il fait ce lundi-là.",
+  "emotion": "aucune",
+  "source": {
+   "reference": "Alexandre Dumas, Les Trois Mousquetaires, 1844",
+   "gutenberg": "https://www.gutenberg.org/ebooks/13951",
+   "domaine_public": true,
+   "verifie": true
+  }
+ },
+ {
+  "id": "fr-57",
+  "famille": "pour-soi",
+  "texte": "Écrire une phrase maladroite exprès, la plus bancale possible. Elle ne sera jamais notée.",
+  "plus_petit": "Trois mots de travers.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-58",
+  "famille": "pour-soi",
+  "texte": "Décrire ce que l'on ferait d'une heure entièrement libre, sans obligation d'être utile.",
+  "plus_petit": "Le premier quart d'heure.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "fr-59",
+  "famille": "pour-soi",
+  "texte": "Si une émotion est là, la décrire comme une météo, un objet ou une température. Sinon, écrire « rien de précis » et décrire la pièce à la place : les deux sont des réponses complètes.",
+  "plus_petit": "Un seul mot, ou « rien ».",
+  "emotion": "facultative"
+ },
+ {
+  "id": "fr-60",
+  "famille": "pour-soi",
+  "texte": "Écrire une phrase pour la personne qui ouvrira ce carnet dans dix ans, même si c'est soi.",
+  "plus_petit": "Écrire la date d'aujourd'hui et une chose vue.",
+  "emotion": "aucune"
+ }
+]

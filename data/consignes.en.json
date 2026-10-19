@@ -1,0 +1,470 @@
+[
+ {
+  "id": "en-01",
+  "famille": "observe",
+  "texte": "Write down three sounds you can hear right now, from the nearest to the farthest.",
+  "plus_petit": "One sound is enough.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-02",
+  "famille": "observe",
+  "texte": "Describe the light in the room without using the word \"light\".",
+  "plus_petit": "Just say where it comes from.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-03",
+  "famille": "observe",
+  "texte": "Pick up something within reach. Write its weight, its temperature, the sound it makes when you put it down.",
+  "plus_petit": "Just its exact colour.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-04",
+  "famille": "observe",
+  "texte": "Look out of the nearest window and write down the first thing that moves.",
+  "plus_petit": "Or the first thing that stays still.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-05",
+  "famille": "observe",
+  "texte": "Describe a mug, a glass or a bottle as if nobody had ever seen one before.",
+  "plus_petit": "Start with its shape.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-06",
+  "famille": "observe",
+  "texte": "Empty a pocket, a bag or a drawer on paper, in the order things come out.",
+  "plus_petit": "Three things, no more.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-07",
+  "famille": "observe",
+  "texte": "Write the route from your front door to your bed. Count the steps if you like.",
+  "plus_petit": "Just the door and the bed.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-08",
+  "famille": "observe",
+  "texte": "Describe a smell you met today: where, when, what it was like.",
+  "plus_petit": "Naming the place is already plenty.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-09",
+  "famille": "observe",
+  "texte": "Log today's weather like a station report: sky, wind, temperature, ground.",
+  "plus_petit": "One measurement.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-10",
+  "famille": "observe",
+  "texte": "Describe your shoes for someone who has to find them in a crowded station.",
+  "plus_petit": "Three clues.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-11",
+  "famille": "observe",
+  "texte": "Watch a plant, a tree or a stain on a wall for one minute, then write it down.",
+  "plus_petit": "Its outline, in one line.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-12",
+  "famille": "observe",
+  "texte": "Describe a sound that repeats (fridge, clock, rain, traffic) and its rhythm.",
+  "plus_petit": "Spell the sound with letters.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-13",
+  "famille": "observe",
+  "texte": "Where is your body touching something right now (chair, floor, clothes, phone)? Write each point of contact, one per line.",
+  "plus_petit": "One point of contact.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-14",
+  "famille": "observe",
+  "texte": "Write what you last ate, with the precision of a chemist or a chef.",
+  "plus_petit": "One ingredient.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-15",
+  "famille": "observe",
+  "texte": "Describe your hands right now: where they are, what they touch, what they did today.",
+  "plus_petit": "Only what they touch.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-16",
+  "famille": "observe",
+  "texte": "Describe an everyday social rule (saying hello, queuing, giving a present) the way a visiting anthropologist would.",
+  "plus_petit": "Describe the gestures only.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-17",
+  "famille": "make-up",
+  "texte": "Someone is waiting for a bus that never comes. Write what they do with their hands.",
+  "plus_petit": "Write the time on the board.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-18",
+  "famille": "make-up",
+  "texte": "A letter arrives twenty years late. Write the address on the envelope, then its first line.",
+  "plus_petit": "The address is enough.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-19",
+  "famille": "make-up",
+  "texte": "A lighthouse is lit for the last time. The keeper packs away one single thing. What is it?",
+  "plus_petit": "Name the thing.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-20",
+  "famille": "make-up",
+  "texte": "Two people share an umbrella that is too small. Nobody speaks. Describe the rain.",
+  "plus_petit": "The sound of rain on the fabric.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-21",
+  "famille": "make-up",
+  "texte": "A bakery at five in the morning, before opening.",
+  "plus_petit": "One smell, one sound.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-22",
+  "famille": "make-up",
+  "texte": "A cleaning robot finds an object it cannot file. Write its storage label.",
+  "plus_petit": "The name it gives the object.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-23",
+  "famille": "make-up",
+  "texte": "Someone wakes up in a house they don't know. Write the first minute, only what they see.",
+  "plus_petit": "The ceiling.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-24",
+  "famille": "make-up",
+  "texte": "A character has just heard important news. Say nothing about what they feel: write only what their hands, feet and eyes do for one minute.",
+  "plus_petit": "One gesture.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-25",
+  "famille": "make-up",
+  "texte": "A librarian notices that one book always comes back with the same page folded down. Which page?",
+  "plus_petit": "The page number.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-26",
+  "famille": "make-up",
+  "texte": "A night train stops in the middle of nowhere. The guard announces: \"…\". Finish the announcement.",
+  "plus_petit": "One line of announcement.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-27",
+  "famille": "make-up",
+  "texte": "Someone is repainting a door. Describe the colour before and the colour after.",
+  "plus_petit": "The two colour names.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-28",
+  "famille": "make-up",
+  "texte": "A grandmother and her grandson peel vegetables without talking. Describe only their movements and the sounds of the kitchen.",
+  "plus_petit": "The sound of the knife.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-29",
+  "famille": "make-up",
+  "texte": "A character packs a suitcase for a trip they may never take. List what goes in.",
+  "plus_petit": "Three things.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-30",
+  "famille": "make-up",
+  "texte": "A family arrives in a country whose alphabet they can't read yet. Write the first three words a child learns to recognise on the signs.",
+  "plus_petit": "Just one sign.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-31",
+  "famille": "remember",
+  "texte": "Describe the kitchen of a place you once lived. Where was the sink? Where was the window?",
+  "plus_petit": "Just the sink.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-32",
+  "famille": "remember",
+  "texte": "The first address you knew by heart. What was across the street?",
+  "plus_petit": "The address itself.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-33",
+  "famille": "remember",
+  "texte": "Something you owned as a child and no longer have: its size, its colour, where it was kept.",
+  "plus_petit": "Its name.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-34",
+  "famille": "remember",
+  "texte": "A journey you made hundreds of times. Three landmarks along the way.",
+  "plus_petit": "One landmark.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-35",
+  "famille": "remember",
+  "texte": "A dish someone used to make often. Write the recipe, even roughly.",
+  "plus_petit": "The ingredients, no amounts.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-36",
+  "famille": "remember",
+  "texte": "A precise sound from a precise year (a ringtone, a theme tune, an engine). Where did you hear it?",
+  "plus_petit": "The year and the sound.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-37",
+  "famille": "remember",
+  "texte": "The oldest object in the room. Where did it come from? How long has it been there?",
+  "plus_petit": "Its age, even a guess.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-38",
+  "famille": "remember",
+  "texte": "The shoes lined up by the door of a family home: how many pairs, whose, in what order.",
+  "plus_petit": "Just one pair.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-39",
+  "famille": "play",
+  "texte": "Write a sentence of exactly ten words.",
+  "plus_petit": "Or five words.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-40",
+  "famille": "play",
+  "texte": "Write three sentences that all begin with \"There is\".",
+  "plus_petit": "Just one.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-41",
+  "famille": "play",
+  "texte": "Write a sentence without the letter \"e\".",
+  "plus_petit": "Or without the letter \"a\".",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-42",
+  "famille": "play",
+  "texte": "List blue things that are neither the sky nor the sea.",
+  "plus_petit": "One blue thing.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-43",
+  "famille": "play",
+  "texte": "Write instructions for a very simple object: a spoon, a door, a button.",
+  "plus_petit": "The first step.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-44",
+  "famille": "play",
+  "texte": "Write a small ad: lost, found, or free to a good home.",
+  "plus_petit": "The headline.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-45",
+  "famille": "play",
+  "texte": "Start with \"I remember\" and add one tiny fact. Repeat, if you feel like it.",
+  "plus_petit": "Just once.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-46",
+  "famille": "play",
+  "texte": "Write a sentence containing a number, a colour and a place name.",
+  "plus_petit": "Two out of three.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-47",
+  "famille": "play",
+  "texte": "Tell yesterday in five words.",
+  "plus_petit": "In one word.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-48",
+  "famille": "play",
+  "texte": "Invent the title of a book that doesn't exist, then its back-cover blurb in two sentences.",
+  "plus_petit": "Just the title.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-49",
+  "famille": "continue",
+  "texte": "Carry on from this opening, with a character of your own: \"It is a truth universally acknowledged, that a single man in possession of a good fortune must be in want of a wife.\" (Jane Austen, Pride and Prejudice, 1813)",
+  "plus_petit": "Write only the next sentence.",
+  "emotion": "aucune",
+  "source": {
+   "reference": "Jane Austen, Pride and Prejudice, 1813",
+   "gutenberg": "https://www.gutenberg.org/ebooks/1342",
+   "domaine_public": true,
+   "verifie": true
+  }
+ },
+ {
+  "id": "en-50",
+  "famille": "continue",
+  "texte": "Carry on from this opening: \"Call me Ishmael.\" (Herman Melville, Moby-Dick, 1851)",
+  "plus_petit": "Write the narrator's real name instead.",
+  "emotion": "aucune",
+  "source": {
+   "reference": "Herman Melville, Moby-Dick, 1851",
+   "gutenberg": "https://www.gutenberg.org/ebooks/2701",
+   "domaine_public": true,
+   "verifie": true
+  }
+ },
+ {
+  "id": "en-51",
+  "famille": "continue",
+  "texte": "Carry on from this opening, somewhere else: \"There was no possibility of taking a walk that day.\" (Charlotte Brontë, Jane Eyre, 1847)",
+  "plus_petit": "What the weather is doing.",
+  "emotion": "aucune",
+  "source": {
+   "reference": "Charlotte Brontë, Jane Eyre, 1847",
+   "gutenberg": "https://www.gutenberg.org/ebooks/1260",
+   "domaine_public": true,
+   "verifie": true
+  }
+ },
+ {
+  "id": "en-52",
+  "famille": "continue",
+  "texte": "Answer this opening in your own way: \"Whether I shall turn out to be the hero of my own life, or whether that station will be held by anybody else, these pages must show.\" (Charles Dickens, David Copperfield, 1850)",
+  "plus_petit": "Name who else might be the hero.",
+  "emotion": "aucune",
+  "source": {
+   "reference": "Charles Dickens, David Copperfield, 1850",
+   "gutenberg": "https://www.gutenberg.org/ebooks/766",
+   "domaine_public": true,
+   "verifie": true
+  }
+ },
+ {
+  "id": "en-53",
+  "famille": "continue",
+  "texte": "Carry on from this opening: \"It is very seldom that mere ordinary people like John and myself secure ancestral halls for the summer.\" (Charlotte Perkins Gilman, The Yellow Wallpaper, 1892)",
+  "plus_petit": "Describe one room of the house.",
+  "emotion": "aucune",
+  "source": {
+   "reference": "Charlotte Perkins Gilman, The Yellow Wallpaper, 1892",
+   "gutenberg": "https://www.gutenberg.org/ebooks/1952",
+   "domaine_public": true,
+   "verifie": true
+  }
+ },
+ {
+  "id": "en-54",
+  "famille": "continue",
+  "texte": "Carry on from this opening: \"Mrs Dalloway said she would buy the gloves herself.\" (Virginia Woolf, Mrs Dalloway in Bond Street, 1923)",
+  "plus_petit": "What colour are the gloves?",
+  "emotion": "aucune",
+  "source": {
+   "reference": "Virginia Woolf, Mrs Dalloway in Bond Street, 1923",
+   "gutenberg": "https://www.gutenberg.org/ebooks/63107",
+   "domaine_public": true,
+   "verifie": true
+  }
+ },
+ {
+  "id": "en-55",
+  "famille": "continue",
+  "texte": "Carry on from this opening: \"And after all the weather was ideal.\" (Katherine Mansfield, The Garden Party, 1922)",
+  "plus_petit": "Ideal for what?",
+  "emotion": "aucune",
+  "source": {
+   "reference": "Katherine Mansfield, The Garden Party, 1922",
+   "gutenberg": "https://www.gutenberg.org/ebooks/1429",
+   "domaine_public": true,
+   "verifie": true
+  }
+ },
+ {
+  "id": "en-56",
+  "famille": "continue",
+  "texte": "Write a sentence on the same pattern, for your own narrator: \"In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.\" (F. Scott Fitzgerald, The Great Gatsby, 1925)",
+  "plus_petit": "Write only the advice.",
+  "emotion": "aucune",
+  "source": {
+   "reference": "F. Scott Fitzgerald, The Great Gatsby, 1925",
+   "gutenberg": "https://www.gutenberg.org/ebooks/64317",
+   "domaine_public": true,
+   "verifie": true
+  }
+ },
+ {
+  "id": "en-57",
+  "famille": "for-me",
+  "texte": "Write a clumsy sentence on purpose, as wobbly as you can. Nobody will ever grade it.",
+  "plus_petit": "Three words, all crooked.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-58",
+  "famille": "for-me",
+  "texte": "Describe what you would do with one completely free hour, with no need to be useful.",
+  "plus_petit": "The first fifteen minutes.",
+  "emotion": "aucune"
+ },
+ {
+  "id": "en-59",
+  "famille": "for-me",
+  "texte": "If a feeling is around, describe it as weather, an object or a temperature. If not, write \"nothing in particular\" and describe the room instead: both are complete answers.",
+  "plus_petit": "One word, or \"nothing\".",
+  "emotion": "facultative"
+ },
+ {
+  "id": "en-60",
+  "famille": "for-me",
+  "texte": "Write one sentence for whoever opens this notebook in ten years, even if that's you.",
+  "plus_petit": "Today's date and one thing you can see.",
+  "emotion": "aucune"
+ }
+]
