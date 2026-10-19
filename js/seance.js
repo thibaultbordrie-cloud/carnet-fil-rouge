@@ -3,11 +3,12 @@ import { t, e, unite, nombre } from "./i18n.js";
 import { lire, langueConsignes } from "./prefs.js";
 import { un, mettre, nouvelId, aujourdhui, setMeta, meta } from "./db.js";
 import { motsDe } from "./compte.js";
-import { $, annoncer, aller } from "./ui.js";
+import { $, annoncer, aller, flash } from "./ui.js";
 
 let courante = null; // { fermer() }
 
-export function fermerSeance() { if (courante) { courante.fermer(); courante = null; } }
+// depuisRetour : la séance se ferme parce qu'on a quitté l'écran (bouton Retour d'Android, geste, lien).
+export function fermerSeance(depuisRetour = false) { if (courante) { courante.fermer(depuisRetour); courante = null; } }
 
 function sonDoux() {
   try {
@@ -65,6 +66,8 @@ export async function ouvrirSeance({ pageId = null, consigne = null } = {}) {
         ${[0, 5, 10, 15].map((m) => `<button type="button" data-min="${m}" aria-pressed="${m === minuteurDefaut}">${m ? e(t("seance.minuteur.min", { n: m })) : e(t("seance.minuteur.aucun"))}</button>`).join("")}
       </div>
       <div class="minuteur-barre" id="barre-min" aria-hidden="true" ${minuteurDefaut && p.minuteurAffichage === "barre" ? "" : "hidden"}><i id="barre-min-i"></i></div>
+      <p class="indice-seance" id="indice-dictee" ${page.texte ? "hidden" : ""}>${e(t("seance.dictee"))}</p>
+      <p class="indice-seance raccourci-bureau">${e(t("seance.raccourci"))}</p>
       <div class="etat"><span id="statut" role="status">${enregistree ? e(t("seance.enregistre")) : ""}</span><span id="compte" ${p.compteur === "visible" ? "" : "hidden"}></span><span id="reste"></span></div>
       <div class="actions">
         ${p.brouillard !== "off" ? `<button type="button" class="btn" id="voir" aria-pressed="false" aria-describedby="voir-aide">${e(t("seance.voir"))}</button><span class="sr" id="voir-aide">${e(t("seance.voir.aide"))}</span>` : ""}
@@ -75,6 +78,8 @@ export async function ouvrirSeance({ pageId = null, consigne = null } = {}) {
   const cadre = $(".cadre"), barre = $("#barre");
   cadre.inert = true; barre.inert = true;
   const ta = $("#ecrit"), miroir = $("#miroir"), papier = $("#papier"), statut = $("#statut");
+  const section = $(".seance");
+  if (page.texte) section.classList.add("a-ecrit");
   ta.value = page.texte;
 
   // Brouillard : le miroir affiche le passé estompé, la partie en cours à pleine intensité.
@@ -108,7 +113,8 @@ export async function ouvrirSeance({ pageId = null, consigne = null } = {}) {
     }
   };
   const planifier = () => { clearTimeout(minuterie); minuterie = setTimeout(() => (enCours = enregistrer()), 350); };
-  ta.addEventListener("input", () => { majMiroir(); majCompte(); planifier(); demarrerMinuteur(); });
+  const indice = $("#indice-dictee");
+  ta.addEventListener("input", () => { majMiroir(); majCompte(); planifier(); demarrerMinuteur(); if (indice && ta.value) indice.hidden = true; if (ta.value) section.classList.add("a-ecrit"); });
   const vider = () => { clearTimeout(minuterie); enCours = enregistrer(); return enCours; };
   const surMasque = () => { if (document.visibilityState === "hidden") vider(); };
   document.addEventListener("visibilitychange", surMasque);
@@ -165,8 +171,14 @@ export async function ouvrirSeance({ pageId = null, consigne = null } = {}) {
 
   // Le clavier ne masque pas la ligne en cours (R28)
   const vv = window.visualViewport;
-  const ajuster = () => document.documentElement.style.setProperty("--vh", (vv ? vv.height : innerHeight) + "px");
-  ajuster(); vv?.addEventListener("resize", ajuster);
+  // Hauteur et décalage du viewport visible : sur iOS le clavier ne redimensionne pas la page,
+  // sur Chrome Android (interactive-widget=resizes-content) si. Dans les deux cas la séance suit la zone visible.
+  const ajuster = () => {
+    const h = document.documentElement.style;
+    h.setProperty("--vh", (vv ? vv.height : innerHeight) + "px");
+    h.setProperty("--vt", (vv ? vv.offsetTop : 0) + "px");
+  };
+  ajuster(); vv?.addEventListener("resize", ajuster); vv?.addEventListener("scroll", ajuster);
 
   const ranger = async () => {
     await vider();
@@ -179,11 +191,16 @@ export async function ouvrirSeance({ pageId = null, consigne = null } = {}) {
   ta.addEventListener("keydown", (ev) => { if ((ev.ctrlKey || ev.metaKey) && ev.key === "Enter") { ev.preventDefault(); ranger(); } });
 
   courante = {
-    fermer() {
+    fermer(depuisRetour) {
+      // Rien ne se perd : la dernière frappe est enregistrée même si l'on quitte par le bouton Retour.
+      // (La lecture du texte se fait tout de suite ; l'écriture IndexedDB se termine ensuite d'elle-même.)
+      const changee = ta.value !== page.texte;
       clearInterval(tic); clearTimeout(minuterie);
+      if (changee) enCours = enregistrer();
+      if (depuisRetour && (enregistree || ta.value.trim())) flash(e(t("seance.garde.retour")));
       document.removeEventListener("visibilitychange", surMasque);
       window.removeEventListener("pagehide", vider);
-      vv?.removeEventListener("resize", ajuster);
+      vv?.removeEventListener("resize", ajuster); vv?.removeEventListener("scroll", ajuster);
       hote.innerHTML = ""; cadre.inert = false; barre.inert = false;
     },
   };

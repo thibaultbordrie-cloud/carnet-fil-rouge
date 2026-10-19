@@ -59,8 +59,12 @@ async function avisDuJour(c) {
   if (etat.majPrete) {
     let notes = [];
     try { const d = await (await fetch(`data/changements.json?maj=${maintenant}`, { cache: "no-store" })).json(); notes = d.notes?.[d.version]?.[langueInterface()] || []; } catch {}
-    return `<div class="avis" role="region" aria-label="${e(t("avis.maj"))}"><p><b>${e(t("avis.maj"))}</b></p>${notes.length ? `<p>${e(t("avis.maj.liste"))}</p><ul>${notes.map((n) => `<li>${e(n)}</li>`).join("")}</ul>` : ""}
+    return `<div class="avis" role="region" aria-label="${e(t("avis.maj"))}"><p><b>${e(t("avis.maj"))}</b></p>${notes.length ? `<p>${e(t("avis.maj.liste"))}</p><ul>${notes.map((n) => `<li>${e(n)}</li>`).join("")}</ul>` : ""}<p class="sous petit">${e(t("avis.maj.suite"))}</p>
       <div class="actions"><button type="button" class="btn" data-avis="maj">${e(t("avis.maj.btn"))}</button><button type="button" class="btn discret" data-avis="maj-plustard">${e(t("avis.fermer"))}</button></div></div>`;
+  }
+  if ((await meta("versionVue")) !== VERSION) {
+    return `<div class="avis" role="region" aria-label="${e(t("maj.faite", { v: VERSION.replace(/\.0$/, "") }))}"><p><b>${e(t("maj.faite", { v: VERSION.replace(/\.0$/, "") }))}</b></p>
+      <div class="actions"><a class="btn" href="#/changements" data-avis-lien="version">${e(t("maj.voir"))}</a><button type="button" class="btn discret" data-avis="version">${e(t("maj.compris"))}</button></div></div>`;
   }
   const premiere = await premiereDisponible();
   if (premiere) {
@@ -96,10 +100,10 @@ async function ecranBienvenue() {
   ecran(t("accueil.titre"), `<section class="accueil">
     <svg class="fil-deco" viewBox="0 0 400 64" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 52 C90 52 110 12 200 12 S310 52 400 52" fill="none" stroke-width="1.5"/></svg>
     <h1>${e(t("accueil.titre"))}</h1><p>${e(t("accueil.l1"))}</p><p>${e(t("accueil.l2"))}</p>
-    <div class="actions pile"><button type="button" class="btn principal" id="plus-tard">${e(t("accueil.plustard"))}</button>
+    <div class="actions pile"><button type="button" class="btn principal" id="commencer">${e(t("accueil.commencer"))}</button>
     <button type="button" class="btn" id="vers-confort">${e(t("accueil.confort"))}</button></div></section>`, { nav: false });
-  const suite = async (h) => { await setMeta("bienvenue", Date.now()); aller(h); };
-  $("#plus-tard").onclick = async () => suite((await premiereDisponible()) ? "#/premiere" : "#/aujourdhui");
+  const suite = async (h) => { await setMeta("bienvenue", Date.now()); await setMeta("versionVue", VERSION); aller(h); };
+  $("#commencer").onclick = async () => suite((await premiereDisponible()) ? "#/premiere" : "#/aujourdhui");
   $("#vers-confort").onclick = () => suite("#/confort");
 }
 
@@ -123,7 +127,7 @@ function paragraphes(texte) {
 
 async function ecranVoici(params) {
   const suite = params.get("suite");
-  ecran(t("voici.titre"), `<h1>${e(t("voici.titre"))}</h1><div class="fiche"><ol class="etapes"><li>${e(t("voici.e1"))}</li><li>${e(t("voici.e2"))}</li><li>${e(t("voici.e3"))}</li></ol></div>
+  ecran(t("voici.titre"), `<h1>${e(t("voici.titre"))}</h1><div class="fiche"><ol class="etapes"><li>${e(t("voici.e1"))}</li><li>${e(t("voici.e2"))}</li><li>${e(t("voici.e3"))}</li></ol><p>${e(t("voici.e4"))}</p><p class="sous">${e(t("voici.e5"))}</p></div>
     <div class="actions pile"><button type="button" class="btn principal" id="ok">${e(t(suite ? "voici.ok" : "voici.retour"))}</button></div>`);
   $("#ok").onclick = async () => { await setMeta("voiciVu", true); aller(suite ? "#/ecrire?" + suite : "#/aujourdhui"); };
 }
@@ -138,8 +142,9 @@ async function ecranAujourdhui() {
   const pagesTxt = pages === 0 ? t("auj.cumul.pages0") : pages === 1 ? t("auj.cumul.pages1") : t("auj.cumul.pagesN", { n: nombre(pages) });
   const retour = !c.jours.has(c.auj) && c.avant && joursEntre(c.avant, c.auj) >= 4;
   const reste = c.propositions.length - 1 - c.choix.i;
-  const voiciVu = await meta("voiciVu");
-  const lienEcrire = (q) => (voiciVu ? `#/ecrire?${q}` : `#/voici?suite=${encodeURIComponent(q)}`);
+  const lienEcrire = (q) => `#/ecrire?${q}`;
+  const favoris = await meta("favoris", []);
+  const garde = favoris.some((f) => f.id === k.id);
   const incipit = k.source ? `<p class="source">${e(t("auj.incipit"))} <a href="${e(k.source.gutenberg)}" rel="noopener noreferrer" target="_blank">${e(k.source.reference)}</a></p>` : "";
   const html = `${await avisDuJour(c)}
     ${retour ? `<p><b>${e(t("auj.retour"))}</b></p>` : ""}
@@ -149,6 +154,7 @@ async function ecranAujourdhui() {
       <p class="consigne" lang="${e(langueConsignes())}">${e(k.texte)}</p>
       <p class="pluspetit"><b>${e(t("auj.pluspetit"))}</b> <span lang="${e(langueConsignes())}">${e(k.plus_petit)}</span></p>
       ${incipit}
+      <p class="garder-consigne"><button type="button" class="btn coeur" id="garder" aria-pressed="${garde}">${icone(garde ? "coeur-plein" : "coeur")}<span>${e(t("fav.garder"))}</span></button></p>
     </article>
     <div class="actions pile">
       ${c.pageDuJour ? `<a class="btn principal" href="#/ecrire?page=${e(c.pageDuJour.id)}">${e(t("auj.continuer"))}</a>
@@ -165,9 +171,16 @@ async function ecranAujourdhui() {
   const changer = async (d) => { c.choix.i += d; await setMeta("choixDuJour", c.choix); await ecranAujourdhui(); $(d > 0 ? "#autre" : "#precedente")?.focus() || $(".consigne")?.focus(); annoncer(c.propositions[c.choix.i].texte); };
   $("#autre", main)?.addEventListener("click", () => changer(1));
   $("#precedente", main)?.addEventListener("click", () => changer(-1));
+  $("#garder", main)?.addEventListener("click", async () => {
+    const l = await meta("favoris", []);
+    const i = l.findIndex((f) => f.id === k.id);
+    if (i >= 0) l.splice(i, 1); else l.push({ id: k.id, langue: langueConsignes(), ajoute: Date.now() });
+    await setMeta("favoris", l);
+    await ecranAujourdhui(); $("#garder")?.focus(); annoncer(t(i >= 0 ? "fav.non" : "fav.oui"));
+  });
   main.onclick = async (ev) => {
     const b = ev.target.closest("[data-avis]"); const l = ev.target.closest("[data-avis-lien]");
-    if (l) { await setMeta(l.dataset.avisLien === "peurs" ? "peursProposees" : "installProposee", true); return; }
+    if (l) { const k2 = l.dataset.avisLien; await setMeta(k2 === "peurs" ? "peursProposees" : k2 === "version" ? "versionVue" : "installProposee", k2 === "version" ? VERSION : true); return; }
     if (!b) return;
     const a = b.dataset.avis;
     if (a === "maj") { etat.majPrete.postMessage("appliquer"); return; }
@@ -176,12 +189,25 @@ async function ecranAujourdhui() {
     if (a === "porte") await setMeta("porteVue", true);
     if (a === "peurs") await setMeta("peursProposees", true);
     if (a === "install") await setMeta("installProposee", true);
+    if (a === "version") await setMeta("versionVue", VERSION);
     await ecranAujourdhui();
   };
 }
 
 async function ecranEcrire(params) {
   if (params.get("page")) return ouvrirSeance({ pageId: params.get("page") });
+  if (params.has("jour")) {
+    if (!(await meta("bienvenue"))) return aller("#/bienvenue");
+    // Ouvert depuis l'icône : le bouton Retour ramène à Aujourd'hui au lieu de fermer l'app.
+    if (!etat.dejaAffiche) { history.replaceState(null, "", "#/aujourdhui"); history.pushState(null, "", "#/ecrire?jour=1"); }
+    const c = await contexteDuJour();
+    return c.pageDuJour ? ouvrirSeance({ pageId: c.pageDuJour.id }) : ouvrirSeance({ consigne: c.consigne });
+  }
+  if (params.has("favori")) {
+    const f = (await meta("favoris", [])).find((x) => x.id === params.get("favori"));
+    const k = f && (await charger(f.langue)).find((x) => x.id === f.id);
+    return ouvrirSeance({ consigne: k || null });
+  }
   if (params.has("consigne")) {
     const liste = await charger(langueConsignes());
     return ouvrirSeance({ consigne: liste[+params.get("consigne")] || null });
@@ -207,12 +233,13 @@ async function ecranCarnet() {
   const items = pages.map((p) => `<li><a href="#/page/${e(p.id)}">
       <span class="ent"><b>${e(t("carnet.page", { n: p.numero }))}</b><span>${e(dateCourte(p.date))}</span></span>
       ${p.prive ? `<span class="marque-prive">${e(t("carnet.prive"))}</span><span class="voile" aria-hidden="true"></span>`
-      : `<span class="sr">${e(p.consigne ? t("seance.consigne") + " : " + p.consigne : p.source === "seance" ? t("carnet.sansconsigne") : t("carnet.importee"))}. </span><p class="debut">${e(p.texte.slice(0, 220))}</p>`}
+      : `${p.consigne ? `<span class="consigne-mini"><b>${e(t("seance.consigne"))} :</b> ${e(p.consigne)}</span>` : `<span class="sr">${e(p.source === "seance" ? t("carnet.sansconsigne") : t("carnet.importee"))}. </span>`}<p class="debut">${e(p.texte.slice(0, 220))}</p>`}
     </a></li>`).join("");
   ecran(t("carnet.titre"), `<h1>${e(t("carnet.titre"))}</h1>
     ${pages.length ? `<ol class="reliure" aria-label="${e(t("carnet.liste"))}">${items}</ol>` : `<p>${e(t("carnet.vide"))}</p>`}
     <h2>${e(t("carnet.plus"))}</h2>
     <ul class="lien-liste">
+      <li><a href="#/favoris">${e(t("carnet.favoris"))}</a></li>
       <li><a href="#/sauvegarde">${e(t("carnet.sauvegarde"))}</a></li>
       <li><a href="#/porte">${e(t("carnet.porte"))}</a></li>
       <li><a href="#/peurs">${e(t("carnet.peurs"))}</a></li>
@@ -412,6 +439,24 @@ async function ecranPorte(params) {
   };
 }
 
+async function ecranFavoris() {
+  const favoris = await meta("favoris", []);
+  const listes = {};
+  for (const f of favoris) listes[f.langue] ||= await charger(f.langue);
+  const items = favoris.map((f) => ({ f, k: listes[f.langue].find((x) => x.id === f.id) })).filter((x) => x.k);
+  ecran(t("fav.titre"), `<h1>${e(t("fav.titre"))}</h1><p class="sous">${e(t("fav.intro"))}</p>
+    ${items.length ? items.map(({ f, k }) => `<article class="fiche"><p class="etiquette">${e(t("fam." + k.famille))}</p><p class="consigne" lang="${e(f.langue)}">${e(k.texte)}</p>
+      <p class="pluspetit"><b>${e(t("auj.pluspetit"))}</b> <span lang="${e(f.langue)}">${e(k.plus_petit)}</span></p>
+      <div class="actions"><a class="btn principal" href="#/ecrire?favori=${e(f.id)}">${e(t("fav.ecrire"))}</a><button type="button" class="btn" data-retirer="${e(f.id)}">${e(t("fav.retirer"))}</button></div></article>`).join("")
+      : `<p>${e(t("fav.vide"))}</p>`}`);
+  nav("carnet");
+  $("#contenu").onclick = async (ev) => {
+    const b = ev.target.closest("[data-retirer]"); if (!b) return;
+    await setMeta("favoris", (await meta("favoris", [])).filter((x) => x.id !== b.dataset.retirer));
+    flash(e(t("fav.non"))); ecranFavoris();
+  };
+}
+
 function ecranAPropos() {
   ecran(t("apropos.titre"), `<h1>${e(t("apropos.titre"))}</h1><p>${e(t("apropos.l1"))}</p><p>${e(t("apropos.l2"))}</p><p>${e(t("apropos.l3"))}</p><p>${e(t("apropos.l4"))}</p><p class="sous">${e(t("apropos.version", { v: VERSION }))}</p>`);
   nav("carnet");
@@ -429,14 +474,14 @@ const ECRANS = {
   "": ecranAujourdhui, aujourdhui: ecranAujourdhui, bienvenue: ecranBienvenue, premiere: ecranPremiere, voici: (r) => ecranVoici(r.params),
   ecrire: (r) => ecranEcrire(r.params), fin: (r) => ecranFin(r.arg), carnet: ecranCarnet, page: (r) => ecranPage(r.arg),
   confort: (r) => { ecranConfort(r.params); nav("confort"); }, sauvegarde: ecranSauvegarde, installer: ecranInstaller, code: ecranCode,
-  peurs: ecranPeurs, porte: (r) => ecranPorte(r.params), apropos: ecranAPropos, changements: ecranChangements,
+  peurs: ecranPeurs, favoris: ecranFavoris, porte: (r) => ecranPorte(r.params), apropos: ecranAPropos, changements: ecranChangements,
 };
 // Un écran lent (lecture des consignes) peut finir après un écran demandé ensuite : on réaffiche alors le bon.
 let seqRoute = 0, dernierTermine = 0;
 async function router() {
   const n = ++seqRoute;
   const r = route();
-  if (r.nom !== "ecrire") fermerSeance();
+  if (r.nom !== "ecrire") fermerSeance(true);
   const f = ECRANS[r.nom] || ecranAujourdhui;
   try { await f(r); } catch (err) { console.error(err); ecran("Erreur", `<h1>${e(t("seance.erreur"))}</h1><p><a class="btn" href="#/aujourdhui">${e(t("fin.retour"))}</a></p>`); }
   if (n < dernierTermine) return router();
@@ -444,18 +489,25 @@ async function router() {
 }
 
 // ---------------------------------------------------------------- démarrage
+// Mises à jour (R15 : rien ne change sans prévenir).
+// - Une version téléchargée pendant la visite attend : un avis propose « Appliquer maintenant », sinon…
+// - …à l'ouverture suivante, elle s'applique d'elle-même avant le premier affichage, puis un avis le dit.
 function serviceWorker() {
-  if (!("serviceWorker" in navigator) || !isSecureContext) return;
-  navigator.serviceWorker.register("sw.js").then((reg) => {
+  if (!("serviceWorker" in navigator) || !isSecureContext) return Promise.resolve(null);
+  let recharge = false;
+  navigator.serviceWorker.addEventListener("controllerchange", () => { if ((etat.majPrete || etat.majAuDemarrage) && !recharge) { recharge = true; location.reload(); } });
+  return navigator.serviceWorker.register("sw.js").then((reg) => {
     const pret = (w) => { etat.majPrete = w; if (route().nom === "aujourdhui" || route().nom === "") router(); };
-    if (reg.waiting && navigator.serviceWorker.controller) pret(reg.waiting);
     reg.addEventListener("updatefound", () => {
       const w = reg.installing;
       w?.addEventListener("statechange", () => { if (w.state === "installed" && navigator.serviceWorker.controller) pret(w); });
     });
-  }).catch(() => {});
-  let recharge = false;
-  navigator.serviceWorker.addEventListener("controllerchange", () => { if (etat.majPrete && !recharge) { recharge = true; location.reload(); } });
+    if (reg.waiting && navigator.serviceWorker.controller) {
+      if (!etat.dejaAffiche && !document.querySelector(".seance")) { etat.majAuDemarrage = true; reg.waiting.postMessage("appliquer"); return "attente"; }
+      pret(reg.waiting);
+    }
+    return reg;
+  }).catch(() => null);
 }
 
 window.addEventListener("beforeinstallprompt", (ev) => { ev.preventDefault(); etat.installer = ev; });
@@ -463,6 +515,11 @@ document.addEventListener("carnet:langue", () => { appliquer(); nav("confort"); 
 window.addEventListener("hashchange", router);
 appliquer();
 nav("aujourdhui");
-serviceWorker();
-router();
+// On attend un court instant l'enregistrement du service worker : si une version attend, elle s'applique
+// avant le premier affichage (le rechargement suit). Sinon, ou au-delà de 800 ms, on affiche normalement.
+const sw = serviceWorker();
+(navigator.serviceWorker?.controller ? Promise.race([sw, new Promise((ok) => setTimeout(ok, 800))]) : Promise.resolve(null)).then((r) => {
+  if (r !== "attente") return router();
+  setTimeout(router, 2500); // filet : si le rechargement n'arrive pas
+});
 window.__carnet = { VERSION }; // repère pour les tests

@@ -1,6 +1,35 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "notes": {
-    "1.0.0": { "fr": ["Première version du carnet."], "en": ["First version of the notebook."] }
+    "1.0.0": {
+      "fr": [
+        "Première version du carnet."
+      ],
+      "en": [
+        "First version of the notebook."
+      ]
+    },
+    "1.1.0": {
+      "fr": [
+        "Un seul geste pour écrire : « Écrire » ouvre directement la page, et un appui long sur l'icône propose « Écrire la page du jour ».",
+        "Le bouton Retour d'Android ne fait plus perdre les derniers mots : la page est toujours enregistrée.",
+        "Quand le clavier est ouvert, la feuille garde plus de place pour le texte.",
+        "Une phrase rappelle qu'on peut dicter avec le micro du clavier.",
+        "On peut garder une consigne qu'on aime (cœur) et la retrouver dans Carnet, « Consignes gardées ».",
+        "Chaque page du carnet montre sa consigne.",
+        "Sur ordinateur, une feuille plus large, et Ctrl + Entrée pour ranger la page.",
+        "Premier écran : « Commencer » est le bouton principal."
+      ],
+      "en": [
+        "One tap to write: \"Write\" opens the page directly, and a long press on the icon offers \"Write today's page\".",
+        "Android's Back button no longer loses the last words: the page is always saved.",
+        "With the keyboard open, the sheet keeps more room for the text.",
+        "A line reminds you that you can dictate with the keyboard microphone.",
+        "You can keep a prompt you like (heart) and find it again in Notebook, \"Kept prompts\".",
+        "Each page in the notebook shows its prompt.",
+        "On a computer, a wider sheet, and Ctrl + Enter to put the page away.",
+        "First screen: \"Start\" is the main button."
+      ]
+    }
   }
 }

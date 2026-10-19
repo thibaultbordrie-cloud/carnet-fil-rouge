@@ -11,6 +11,10 @@
   "background_color": "#E8E5DE",
   "theme_color": "#E8E5DE",
   "categories": ["productivity", "lifestyle", "books"],
+  "shortcuts": [
+    { "name": "Écrire la page du jour", "short_name": "Écrire", "url": "./index.html#/ecrire?jour=1", "icons": [{ "src": "icons/icone-192.png", "sizes": "192x192", "type": "image/png" }] },
+    { "name": "Le carnet", "short_name": "Carnet", "url": "./index.html#/carnet", "icons": [{ "src": "icons/icone-192.png", "sizes": "192x192", "type": "image/png" }] }
+  ],
   "icons": [
     { "src": "icons/icone-192.png", "sizes": "192x192", "type": "image/png" },
     { "src": "icons/icone-512.png", "sizes": "512x512", "type": "image/png" },

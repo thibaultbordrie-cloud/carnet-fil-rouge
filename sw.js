@@ -1,7 +1,7 @@
 // Service worker du Carnet Fil Rouge (généré par outils/construire.py — ne pas modifier à la main).
 // Hors ligne : tout est mis en cache à l'installation. Une nouvelle version attend que la personne
 // l'applique (« Appliquer maintenant ») : rien ne change sans prévenir (R15).
-const CACHE = "carnet-0ae292af4160";
+const CACHE = "carnet-0114b6ee65fe";
 const FICHIERS = [
  "./",
  "css/carnet.css",
@@ -42,7 +42,9 @@ const FICHIERS = [
 ];
 
 self.addEventListener("install", (ev) => {
-  ev.waitUntil(caches.open(CACHE).then((c) => c.addAll(FICHIERS)));
+  // cache: "reload" : on va chercher chaque fichier sur le réseau, jamais dans le cache HTTP du navigateur,
+  // sinon une nouvelle version pourrait garder un ancien fichier (GitHub Pages met 10 min de cache).
+  ev.waitUntil(caches.open(CACHE).then((c) => c.addAll(FICHIERS.map((f) => new Request(f, { cache: "reload" })))));
 });
 self.addEventListener("activate", (ev) => {
   ev.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k.startsWith("carnet-") && k !== CACHE).map((k) => caches.delete(k))))
